@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../../../../shared/services/json.service';
 
 @Component({
   selector: 'app-vista-catalogo',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaCatalogoComponent implements OnInit {
 
-  constructor() { }
+  datos: any[];
+
+  constructor(
+    private jsonService: JsonService,
+  ) { }
 
   ngOnInit(): void {
+    this.jsonService.get('datos').subscribe(  res => {
+      console.log(res);
+      this.datos = res as any[];
+    }, (error) => {
+      console.log('ERRORES: ', error);
+    });
   }
 
 }

@@ -12,14 +12,14 @@
         <div class="flip">
             <div class="front">
                 <!-- inicio de front -->
-                <img src="..."
-                    class="card-img-top img-fluid" alt="img Fondo">
+                <!-- <img src="..."
+                    class="card-img-top img-fluid" alt="img Fondo"> -->
                 <div class="text-center">
-                    <img src="..."
-                        alt="img Persona" class="personaImg rounded-circle" height="100px" width="100px">
+                    <img [src]="objeto.ImagenPortada"
+                        alt="img Persona" class="" height="100px" width="100px">
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">titulo</h5>
+                    <h5 class="card-title"> {{ objeto.Nombre }} </h5>
                     
                 </div>
                 <!-- fin front -->
@@ -29,7 +29,7 @@
                 <div class="card-body backCard" >
                     <!-- <p class="card-text">Edad: {{integrante.age}} años</p> -->
                     <p class="card-text">descripcion</p>
-                    <span class="badge badge-primary">cosito</span>
+                    <span *ngFor="let marca of objeto.Marcas" class="badge badge-primary">{{marca}}</span>
                 </div>                  
                 <!-- fin back  -->
             </div>

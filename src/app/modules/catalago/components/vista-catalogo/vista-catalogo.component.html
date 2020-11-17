@@ -1,5 +1,4 @@
 <div class="container m-2">
-    <app-tarjeta></app-tarjeta>
-    <app-tarjeta></app-tarjeta>
+    <app-tarjeta *ngFor="let dato of datos" [objeto]="dato" ></app-tarjeta>
 
 </div>
