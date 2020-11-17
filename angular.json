@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "catalogo-nia"
+    }
+  },
+  "defaultProject": "catalogo-nia",
+  "cli": {
+    "analytics": "e4de945a-608b-4735-9fd8-10d4b5bd7dc2"
+  }
 }
