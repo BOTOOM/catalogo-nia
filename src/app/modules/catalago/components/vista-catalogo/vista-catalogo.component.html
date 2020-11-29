@@ -1,4 +1,8 @@
 <div class="container m-2">
-    <app-tarjeta *ngFor="let dato of datos" [objeto]="dato" ></app-tarjeta>
-
+    <div  class="row">
+        <div *ngFor="let dato of datos" >
+            <app-tarjeta class="m-2"  [objeto]="dato" ></app-tarjeta>
+        </div>  
+    </div>
+    
 </div>
