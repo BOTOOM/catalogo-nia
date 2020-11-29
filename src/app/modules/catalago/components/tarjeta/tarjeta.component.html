@@ -10,8 +10,9 @@
                         alt="img Persona" class="card-img-top border-radius p-1">
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title"> {{ objeto.Nombre }} </h5>
-                    
+                    <h5 class="card-title"> <strong> {{ objeto.Nombre | uppercase }} </strong>  </h5>
+                    <p align="right" class="card-text text-black" style="opacity: 0.5;" >
+                        SKU: {{ objeto.Sku }} </p>
                 </div>
                 <!-- fin front -->
             </div>
