@@ -1,1 +1,31 @@
-<p>tarjeta works!</p>
+<div class="card m-2 border-radius" style="width: 18rem; max-height: 300px;">
+    <div class="card-flip">
+        <div class="flip">
+            <div class="front">
+                <!-- inicio de front -->
+                <!-- <img src="..."
+                    class="card-img-top img-fluid" alt="img Fondo"> -->
+                <div class="text-center">
+                    <img [src]="objeto.ImagenPortada" alt="img Persona" class="card-img-top border-radius p-1">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> <strong> {{ objeto.Nombre | uppercase }} </strong> </h5>
+                    <p align="right" class="card-text text-black" style="opacity: 0.5;">
+                        SKU: {{ objeto.Sku }} </p>
+                </div>
+                <!-- fin front -->
+            </div>
+            <div class="back">
+                <!-- inicio back -->
+                <div class="card-body backCard">
+                    <!-- <p class="card-text">Edad: {{integrante.age}} años</p> -->
+                    <p class="card-text">descripcion</p>
+                    <span *ngFor="let marca of objeto.Marcas" class="badge badge-primary mr-1">{{marca}}</span>
+                    <br>
+                    <a class="btn btn-primary mt-2">Mas Información</a>
+                </div>
+                <!-- fin back   -->
+            </div>
+        </div>
+    </div>
+</div>
